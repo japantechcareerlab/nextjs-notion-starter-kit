@@ -92,7 +92,11 @@ export function NotionPageHeader({
                       <components.PageLink
                         href={mapPageUrl(link.pageId)}
                         key={index}
-                        className={cs(styles.mobileNavLink, 'breadcrumb', 'button')}
+                        className={cs(
+                          styles.mobileNavLink,
+                          'breadcrumb',
+                          'button'
+                        )}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.title}
@@ -103,7 +107,11 @@ export function NotionPageHeader({
                       <components.Link
                         href={link.url}
                         key={index}
-                        className={cs(styles.mobileNavLink, 'breadcrumb', 'button')}
+                        className={cs(
+                          styles.mobileNavLink,
+                          'breadcrumb',
+                          'button'
+                        )}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.title}
