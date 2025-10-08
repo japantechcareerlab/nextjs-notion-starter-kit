@@ -50,7 +50,7 @@ export function NotionPageHeader({
     .filter(Boolean)
 
   return (
-    <header className='notion-header'>
+    <header className={cs('notion-header', isMobileMenuOpen && styles.mobileMenuActive)}>
       <div className='notion-nav-header'>
         <Breadcrumbs block={block} rootOnly={true} />
 
