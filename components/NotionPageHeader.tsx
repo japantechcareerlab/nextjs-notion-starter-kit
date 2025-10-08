@@ -1,9 +1,9 @@
 import type * as types from 'notion-types'
+import { IoMdClose } from '@react-icons/all-files/io/IoMdClose'
+import { IoMdMenu } from '@react-icons/all-files/io/IoMdMenu'
 import cs from 'classnames'
 import * as React from 'react'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
-import { IoMdMenu } from '@react-icons/all-files/io/IoMdMenu'
-import { IoMdClose } from '@react-icons/all-files/io/IoMdClose'
 
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 
