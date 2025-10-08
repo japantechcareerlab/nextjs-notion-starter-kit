@@ -68,7 +68,7 @@ export function NotionPageHeader({
             <button
               className={styles.hamburgerButton}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle navigation menu"
+              aria-label='Toggle navigation menu'
               aria-expanded={isMobileMenuOpen}
             >
               <span></span>
