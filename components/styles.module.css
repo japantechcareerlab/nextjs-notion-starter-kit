@@ -219,3 +219,88 @@
 .hidden {
   visibility: hidden;
 }
+
+/* Hamburger menu button - hidden on desktop */
+.hamburgerButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 24px;
+  color: var(--fg-color);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile search - hidden on desktop */
+.mobileSearch {
+  display: none;
+}
+
+/* Desktop navigation - visible on desktop */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mobile menu dropdown */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--bg-color);
+  border: 1px solid var(--fg-color-1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 200px;
+  z-index: 1000;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 12px 16px;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.mobileNavLink:hover {
+  background-color: var(--bg-color-1);
+}
+
+/* Mobile styles - adjust breakpoint as needed (768px is common for mobile/tablet) */
+@media only screen and (max-width: 768px) {
+  /* Hide desktop navigation */
+  .desktopNav {
+    display: none;
+  }
+
+  /* Show mobile search */
+  .mobileSearch {
+    display: flex;
+    order: 1;
+  }
+
+  /* Show hamburger button */
+  .hamburgerButton {
+    display: flex;
+    order: 2;
+  }
+
+  /* Show mobile menu when open */
+  .mobileMenu {
+    display: flex;
+  }
+
+  /* Ensure the parent container allows proper positioning */
+  .notion-nav-header-rhs {
+    position: relative;
+  }
+}
